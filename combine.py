@@ -14,7 +14,7 @@ def read_files(file_path=None):
             return filedialog.askopenfilenames()
 
     except FileNotFoundError:
-        print("Tiedostoa ei löydy")
+        print("File couldn't be found")
         return 0
 
 
