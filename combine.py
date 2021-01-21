@@ -1,17 +1,15 @@
 from PyPDF2 import PdfFileMerger
 
 
-def read_files(file_path=None):
+def read_files():
     try:
-        if file_path is None:
+        import tkinter as tk
+        from tkinter import filedialog
 
-            import tkinter as tk
-            from tkinter import filedialog
+        root = tk.Tk()
+        root.withdraw()
 
-            root = tk.Tk()
-            root.withdraw()
-
-            return filedialog.askopenfilenames()
+        return filedialog.askopenfilenames()
 
     except FileNotFoundError:
         print("File couldn't be found")
